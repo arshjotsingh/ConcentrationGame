@@ -81,4 +81,101 @@ function showImage(img_id) {
       	}
 	}
 }
+function shuffle(array) 
+{
+	/// <summary>Randomize the array passed to it. The map to image array is 
+	/// passed to it with default values and it shuffles the array </summary>
+	/// <param name="array" type="Number">The array to be shuffled - 
+	/// map_to_image</param>
+  	var currentIndex = array.length, temporaryValue, randomIndex ;
+
+  	// While there remain elements to shuffle...
+  	while (0 !== currentIndex) 
+  	{
+	    // Pick a remaining element...
+	    randomIndex = Math.floor(Math.random() * currentIndex);
+	    currentIndex -= 1;
+
+	    // And swap it with the current element.
+	    temporaryValue = array[currentIndex];
+	    array[currentIndex] = array[randomIndex];
+	    array[randomIndex] = temporaryValue;
+  	}
+
+}
+
+function countTime()
+{
+	/// <summary>Determines how much time taken by user to 
+	/// complete the game</summary>
+	seconds++;
+	if (seconds==60) {
+		minute++;
+		seconds=0;
+	}
+	
+	timer_id = setTimeout('countTime()',1000);
+	 
+	
+}
+
+function changeBackToDefaultImage() 
+{
+	/// <summary>Determines whether the selected cards by user are in pair or not. 
+	/// If they are in pair it would increase the counter for finished cards, 
+	/// if not then it would display the default card </summary>
+	
+	// if both clicked are the same cards
+	if ((clicked_images[0] == clicked_images[1])) 
+	{
+		document.getElementById('img'+clicked_images[0]).src =
+		"images/deck-back.png";
+		allow_click = true;
+	} 
+	else
+	{
+		// if cards pair dont match
+		if (map_to_image[clicked_images[0]] != map_to_image[clicked_images[1]]) 
+		{
+			if (user_images[clicked_images[0]] == 0) 
+			{
+			
+				document.getElementById('img'+clicked_images[0]).src = 
+				"images/deck-back.png";
+			}
+ 
+			if (user_images[clicked_images[1]] == 0) 
+			{
+				document.getElementById('img'+clicked_images[1]).src = 
+				"images/deck-back.png";
+			}	
+		}
+
+		// if cards are in pair
+		if (map_to_image[clicked_images[0]] == map_to_image[clicked_images[1]]) 
+		{
+			if (user_images[clicked_images[0]] == 0 && 
+				user_images[clicked_images[1]] == 0) 
+			{ 
+				counter_for_finishedimage++; 
+			}
+			user_images[clicked_images[0]] = 1;
+			user_images[clicked_images[1]] = 1;
+		}
+
+		// check for all cards if finished or not
+		if (counter_for_finishedimage >= number_of_images/2) 
+		{
+			alert('Yayyy!!! Completed in '+minute+' minutes and '
+			+seconds+' seconds');
+			init();
+		} 
+		else 
+		{
+			allow_click = true;
+		}
+	}
+}
+
+
 
