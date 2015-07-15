@@ -1,0 +1,63 @@
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+
+.container
+{
+    width: 100%;
+    float:none;
+    margin:0 auto;
+}
+
+table
+{
+    float:none;
+    margin:0 auto;
+    width:100%;
+}
+
+
+
+img
+{
+    width:100%;
+}
+
+.header
+{
+    font-size:5vh;
+    text-align:center;
+    padding:.2em;
+    text-shadow: 4px 4px 6px rgba(0,0,0,0.75);
+    color:#ffffff;
+    background-color:#00470b;
+    
+    -webkit-box-shadow: 16px 14px 21px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 16px 14px 21px 0px rgba(0,0,0,0.75);
+    box-shadow: 16px 14px 21px 0px rgba(0,0,0,0.75);
+    
+    margin-bottom:1em;
+}
+
+td
+{
+    text-align:center;
+    
+   
+}
+
+a
+{
+    text-decoration:none;
+    color:black;
+}
+
+a:hover
+{
+   color:white;
+}
+
+body
+{
+    background-image:url('images/background-tile.jpg');
+    font-family: 'Fjalla One', sans-serif;
+    
+}
