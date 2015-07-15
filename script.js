@@ -1,3 +1,19 @@
+/// <var elementType='Array'>The images of cards mapped to array for match 2 
+/// on 2</var>
+var map_to_image = new Array( 1,1,2,2,3,3,4,4,5,5 );
+
+/// <var elementType='Array'>The images which are flipped correctly by user</var>
+var user_images = new Array();
+
+/// <var elementType='Array'>A Tempreory array which holds image id for clicked 
+/// cards</var>
+var clicked_images = new Array(0, 0);
+
+/// <var>Declare Variables used in script</var>
+var minute, seconds, counter_for_clickedimages, timer_id, allow_click, 
+counter_for_finishedimage, number_of_images;
+
+
 function init() 
 {
 	/// <summary>Initiates the game. It clears the previous clock, 
