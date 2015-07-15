@@ -1,6 +1,6 @@
 # ConcentrationGame
-# Concentration Game contributers - 
+# Concentration Game contributors - 
 #   Arshjot Singh 
 #   Rana Jaskaran Singh 
 #   Navtej Singh
-#   Amandeep Singh
+#   Amandeep Singh Lodhi
