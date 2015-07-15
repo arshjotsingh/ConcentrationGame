@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<title>	Concentration Game Assignment </title>
+		<script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" type="text/css" media="(min-width: 1000px)" href="style.css">
+		<link rel="stylesheet" type="text/css" media="(max-width: 1000px)" href="style_medium.css" />
+		<link rel="stylesheet" type="text/css" media="(max-width: 400px)" href="style_small.css" />
+	</head>
+	<body onLoad="init()">
+	
+		
+		<div class="container">
+			<div class="header">
+					<p> Concentration Cards</p>
+			</div>
+				
+			<table>
+				<script>
+				
+					var number_of_rows = 2;
+					var number_of_cols = 5;
+					var counter = 0;
+					
+					for (var row = 0; row < number_of_rows; row++)
+					{
+						document.write('<tr>');
+						for (var column = 0; column < number_of_cols; column++) 
+						{
+							document.write('<td>');
+							document.write('<a href="javascript:showImage('+counter+')">');
+							document.write('<img src="images/deck-back.png" id="img'+counter+'" border="1">');
+							document.write('</a></td>');
+							counter++;
+						}
+						
+						document.write('</tr>');
+					}
+				</script>
+			</table>
+		</div>
+	</body>
+</html>
